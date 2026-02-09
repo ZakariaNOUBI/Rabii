@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Easy Bridge International Academy - Offrant des formations professionnelles et supérieures pour un avenir réussi.">
+  <title>Formations | Easy Bridge International Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <script src="js/scripts.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { primary: '#B08E2A', secondary: '#203749', light: '#FFFFFF' } } }
+    }
+  </script>
+  <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body class="font-sans text-secondary bg-light">
+<!-- Header -->
+ <header class="bg-light shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <a href="index.html"><img src="img/logo.jpg" alt="Logo EasyBridge" class="h-10"></a>
+        <div class="leading-tight">
+          <h1 class="font-bold text-sm text-secondary">Easy Bridge</h1>
+          <p class="text-xs text-gray-600">International Academy</p>
+        </div>
+      </div>
+
+      <!-- Bouton menu mobile -->
+      <button id="menu-btn" class="md:hidden flex flex-col space-y-1.5" aria-label="Menu" aria-expanded="false">
+        <span class="block w-6 h-0.5 bg-secondary"></span>
+        <span class="block w-6 h-0.5 bg-secondary"></span>
+        <span class="block w-6 h-0.5 bg-secondary"></span>
+      </button>
+
+      <!-- Menu desktop -->
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-sm items-center"
+        aria-label="Menu principal">
+        <a href="index.html">Accueil</a>
+        <a href="Formation.html">Nos formations</a>
+        <a href="ContactezNous.html">Infos & Recrutement</a>
+        <a href="Inscription.html" class="bg-primary text-light px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">
+          Inscription
+        </a>
+      </nav>
+    </div>
+
+    <!-- Menu mobile -->
+    <nav id="mobile-menu" class="mobile-collapsible md:hidden bg-light border-t border-gray-200" style="height:0">
+      <div class="flex flex-col px-6 pb-2">
+        <a href="index.html" class="block py-3 hover:text-primary border-b border-gold-100">Accueil</a>
+        <a href="Formation.html" class="block py-3 hover:text-primary border-b border-gold-100">Nos formations</a>
+        <a href="ContactezNous.html" class="block py-3 hover:text-primary border-b border-gold-100">Infos &
+          Recrutement</a>
+        <a href="Inscription.html"
+          class="block mt-3 bg-primary text-light text-center px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">
+          Inscription
+        </a>
+        <a href="#" id="installBtnMobile"
+          class="block mt-3 bg-secondary text-white text-center px-4 py-2 rounded-lg font-semibold hover:bg-gray-700">
+          📲 Installer
+        </a>
+      </div>
+    </nav>
+  </header>
+<main> 
+  <!-- Hero -->
+  <section class="bg-secondary text-light py-12 text-center">
+    <h2 class="text-3xl font-bold">Nos Formations</h2>
+    <p class="mt-2">Un enseignement de qualité pour préparer votre avenir</p>
+  </section>
+
+  <!-- Section 1 : Formations Supérieures -->
+  <section id="Fs" class="max-w-6xl mx-auto px-6 py-12">
+  <h3  class="text-3xl font-bold text-secondary mb-12 text-center animate-fade-in">
+    🎓 Formations Supérieures
+  </h3>
+
+  <!-- Filtres -->
+  <div class="flex justify-center gap-4 mb-10 flex-wrap">
+    <button class="filter-btn bg-secondary text-white px-4 py-2 rounded-full text-sm hover:bg-primary transition" data-filter="all">Tous</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded-full text-sm hover:bg-secondary hover:text-white transition" data-filter="gestion">Pôle Gestion</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded-full text-sm hover:bg-secondary hover:text-white transition" data-filter="informatique">Pôle Informatique</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded-full text-sm hover:bg-secondary hover:text-white transition" data-filter="genie">Pôle Génie appliqué</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded-full text-sm hover:bg-secondary hover:text-white transition" data-filter="logistique">Pôle Logistique</button>
+  </div>
+
+  <div id="formations-grid" class="grid md:grid-cols-2 gap-8">
+
+    <!-- Pôle Gestion -->
+    <div class="formation-card gestion bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up">
+      <h4 class="font-semibold text-xl mb-3 text-primary">📊 Pôle Gestion</h4>
+      <ul class="space-y-2 text-sm text-gray-700">
+        <li>🎓 <a href="fichiers/CatalogueFormations-2.pdf" target="_blank" class="hover:text-secondary hover:underline">Bachelor en Management des PME</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-3.pdf" target="_blank" class="hover:text-secondary hover:underline">Master en Management des PME</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-6.pdf" target="_blank" class="hover:text-secondary hover:underline">Bachelor en Management des RH</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-7.pdf" target="_blank" class="hover:text-secondary hover:underline">Master en Management des PME</a></li>
+      </ul>
+    </div>
+
+    <!-- Pôle Informatique -->
+    <div class="formation-card informatique bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-200">
+      <h4 class="font-semibold text-xl mb-3 text-primary">💻 Pôle Informatique</h4>
+      <ul class="space-y-2 text-sm text-gray-700">
+        <li>🎓 <a href="fichiers/CatalogueFormations-28.pdf" target="_blank" class="hover:text-secondary hover:underline">Bachelor en Systèmes et Réseaux Informatiques</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-29.pdf" target="_blank" class="hover:text-secondary hover:underline">Master en Systèmes et Réseaux Informatiques</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-30.pdf" target="_blank" class="hover:text-secondary hover:underline">Bachelor en Développement Logiciel</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-31.pdf" target="_blank" class="hover:text-secondary hover:underline">Master en Développement Logiciel</a></li>
+      </ul>
+    </div>
+
+    <!-- Pôle Génie appliqué -->
+    <div class="formation-card genie bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-400">
+
+      <h4 class="font-semibold text-xl mb-3 text-primary">🛠️ Pôle Génie appliqué</h4>
+      <ul class="space-y-2 text-sm text-gray-700">
+        <li>🎓 <a href="fichiers/CatalogueFormations-69.pdf" target="_blank" class="hover:text-secondary hover:underline">Bachelor en Efficacité énergétique</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-70.pdf" target="_blank" class="hover:text-secondary hover:underline">Master en Efficacité Énergétique</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-75.pdf" target="_blank" class="hover:text-secondary hover:underline">Bachelor en Génie climatique et froid</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-76.pdf" target="_blank" class="hover:text-secondary hover:underline">Master en Génie climatique et froid</a></li>
+      </ul>
+    </div>
+
+    <!-- Pôle Logistique -->
+    <div class="formation-card logistique bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-600">
+      <h4 class="font-semibold text-xl mb-3 text-primary">🚚 Pôle Logistique</h4>
+      <ul class="space-y-2 text-sm text-gray-700">
+        <li>🎓 <a href="fichiers/CatalogueFormations-56.pdf" target="_blank" class="hover:text-secondary hover:underline">Bachelor en Logistique et transports</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-57.pdf" target="_blank" class="hover:text-secondary hover:underline">Master en Logistique et transports</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-58.pdf" target="_blank" class="hover:text-secondary hover:underline">Bachelor en Génie Civil et Construction</a></li>
+        <li>🎓 <a href="fichiers/CatalogueFormations-59.pdf" target="_blank" class="hover:text-secondary hover:underline">Master en Génie Civil et Construction</a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<!-- Section 2 : Formations Professionnelles -->
+<section id="Fp"  class="bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-3xl font-bold text-secondary mb-12 text-center animate-fade-in">
+      🛠️ Formations Professionnelles
+    </h3>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up">
+        <h4 class="font-semibold text-xl mb-3 text-primary">⚡ Formations courtes</h4>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li>🎯 Initiation à l’informatique</li>
+          <li>🗣️ Techniques de communication</li>
+          <li>📊 Gestion de projet agile</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-200">
+        <h4 class="font-semibold text-xl mb-3 text-primary">📜 Certificats professionnels</h4>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li>💼 Comptabilité</li>
+          <li>📢 Marketing digital</li>
+          <li>🌍 Langues (Anglais / Français)</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-400">
+        <h4 class="font-semibold text-xl mb-3 text-primary">🔧 Formations techniques</h4>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li>⚙️ Électricité et maintenance</li>
+          <li>🛡️ Réseaux et cybersécurité</li>
+          <li>🎨 Design et infographie</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-600">
+        <h4 class="font-semibold text-xl mb-3 text-primary">🎯 Programmes sur mesure</h4>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li>⭐ Leadership</li>
+          <li>🤝 Développement d’équipe</li>
+          <li>🚨 Gestion de crise</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Section Tarifs -->
+<section id="tarifs" class="bg-white">
+  <div class="max-w-4xl mx-auto px-6 py-12 text-center">
+    <h3 class="text-3xl font-bold text-secondary mb-6 animate-fade-in">
+      💰 Tarifs des Formations
+    </h3>
+    <p class="text-gray-700 mb-6">
+      Découvrez nos frais de scolarité pour les formations supérieures. 
+      <br>
+      <span class="font-semibold text-primary">
+        ⚠️ Pour les formations professionnelles, les tarifs varient selon la nature de la formation et sa durée.
+      </span>
+    </p>
+
+    <!-- Image tarifs -->
+    <div class="shadow-lg rounded-2xl overflow-hidden inline-block">
+      <img src="img/tarifs.jpg" alt="Tarifs Easy Bridge Academy" class="w-full max-w-3xl mx-auto">
+    </div>
+  </div>
+</section>
+
+
+<!-- Section 3 : Soutien scolaire & Langues -->
+<section>
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-3xl font-bold text-secondary mb-12 text-center animate-fade-in">
+      📚 Soutien scolaire & Langues
+    </h3>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up">
+        <h4 class="font-semibold text-xl mb-3 text-primary">📖 Soutien scolaire</h4>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li>🧮 Accompagnement primaire et secondaire</li>
+          <li>📝 Préparation aux examens</li>
+          <li>🔢 Renforcement en mathématiques et sciences</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-200">
+        <h4 class="font-semibold text-xl mb-3 text-primary">🌐 Cours de langues</h4>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li>🇬🇧 Anglais intensif</li>
+          <li>🇫🇷 Français professionnel</li>
+          <li>🇪🇸 Espagnol débutant et avancé</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-secondary text-light py-4 text-center text-sm"> © 2025 Zakaria NOUBI, CEGEP de trois-rivières. Tous droits réservés.</footer>
+
+
+</body>
+
+</html>

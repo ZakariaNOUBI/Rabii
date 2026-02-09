@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Easy Bridge International Academy - Offrant des formations professionnelles et supérieures pour un avenir réussi.">
+  <title>Inscription | Easy Bridge International Academy</title>
+  <link rel="stylesheet" href="style/css/style.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/btnMenu.js" defer></script>
+
+
+
+
+
+</head>
+
+<body class="font-sans text-secondary bg-light">
+  <!-- Navbar -->
+  <header class="bg-light shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <a href="index.html"><img src="img/logo.jpg" alt="Logo EasyBridge" class="h-10"></a>
+        <div class="leading-tight">
+          <h1 class="font-bold text-sm text-secondary">Easy Bridge</h1>
+          <p class="text-xs text-gray-800">International Academy</p>
+        </div>
+      </div>
+
+      <!-- Bouton menu mobile -->
+      <button id="menu-btn" class="md:hidden flex flex-col space-y-1.5" aria-label="Menu" aria-expanded="false">
+        <span class="block w-6 h-0.5 bg-secondary"></span>
+        <span class="block w-6 h-0.5 bg-secondary"></span>
+        <span class="block w-6 h-0.5 bg-secondary"></span>
+      </button>
+
+      <!-- Menu desktop -->
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-sm items-center"
+        aria-label="Menu principal">
+        <a href="index.html">Accueil</a>
+        <a href="Formation.html">Nos formations</a>
+        <a href="ContactezNous.html">Infos & Recrutement</a>
+        <a href="Inscription.html" class="bg-primary text-light px-4 py-2 rounded-lg font-semibold hover:bg-yellow-800">
+          Inscription
+        </a>
+      </nav>
+    </div>
+
+    <!-- Menu mobile -->
+    <nav id="mobile-menu" class="mobile-collapsible md:hidden bg-light border-t border-gray-200" style="height:0">
+      <div class="flex flex-col px-6 pb-2">
+        <a href="index.html" class="block py-3 hover:text-primary border-b border-gold-100">Accueil</a>
+        <a href="Formation.html" class="block py-3 hover:text-primary border-b border-gold-100">Nos formations</a>
+        <a href="ContactezNous.html" class="block py-3 hover:text-primary border-b border-gold-100">Infos &
+          Recrutement</a>
+        <a href="Inscription.html"
+          class="block mt-3 bg-primary text-light text-center px-4 py-2 rounded-lg font-semibold hover:bg-yellow-800">
+          Inscription
+        </a>
+        <a href="#" id="installBtnMobile"
+          class="block mt-3 bg-secondary text-white text-center px-4 py-2 rounded-lg font-semibold hover:bg-gray-700">
+          📲 Installer
+        </a>
+      </div>
+    </nav>
+  </header>
+  <!-- Section Formulaire -->
+  <main>
+    <section class="relative bg-secondary text-light py-16">
+      <div class="max-w-4xl mx-auto px-6 bg-light text-secondary rounded-2xl shadow-lg p-8">
+        <h2 class="text-3xl font-bold text-center mb-6">Formulaire d'inscription</h2>
+
+        <form action="traitement_inscription.php" method="POST" class="space-y-6" novalidate>
+
+          <!-- Nom complet -->
+          <div>
+            <label for="prenom" class="block text-sm font-semibold mb-2">Prénom</label>
+            <input type="text" id="prenom" name="prenom" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+          </div>
+          <div>
+            <label for="nom" class="block text-sm font-semibold mb-2">Nom de famille</label>
+            <input type="text" id="nom" name="nom" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+          </div>
+          <div>
+            <label for="typeSecondaire" class="block text-sm font-semibold mb-2">Type de secondaire</label>
+            <select id="typeSecondaire" name="typeSecondaire" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="">-- Sélectionnez --</option>
+              <option value="superieure">Secondaire marocain</option>
+              <option value="professionnelle">Secondaire étranger</option>
+            </select>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-semibold mb-2">Adresse email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+          </div>
+
+          <!-- Téléphone -->
+          <div>
+            <label for="telephone" class="block text-sm font-semibold mb-2">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+          </div>
+
+          <!-- Type de formation -->
+          <div>
+            <label for="typeFormation" class="block text-sm font-semibold mb-2">Type de formation</label>
+            <select id="typeFormation" name="typeFormation" onchange="updatePoles()" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="">-- Sélectionnez --</option>
+              <option value="superieure">Formation Supérieure</option>
+              <option value="professionnelle">Formation Professionnelle</option>
+            </select>
+          </div>
+
+          <!-- Pôle -->
+          <div>
+            <label for="pole" class="block text-sm font-semibold mb-2">Pôle</label>
+            <select id="pole" name="pole" onchange="updateProgrammes()" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="">-- Sélectionnez un pôle --</option>
+            </select>
+          </div>
+
+          <!-- Programme -->
+          <div>
+            <label for="programme" class="block text-sm font-semibold mb-2">Programme</label>
+            <select id="programme" name="programme" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="">-- Sélectionnez un programme --</option>
+            </select>
+          </div>
+
+          <!-- Zone d'affichage des erreurs -->
+          <div id="form-errors" class="text-red-800 font-medium space-y-1"></div>
+
+          <!-- Bouton -->
+          <div class="text-center">
+            <button type="submit" aria-label="Envoyer l'inscription"
+              class="bg-primary text-light px-8 py-3 rounded-lg font-semibold hover:bg-yellow-800 transition">
+              Envoyer l'inscription
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+ <!-- Footer -->
+  <footer class="bg-secondary text-light py-6 text-center text-sm">
+    © 2025 Zakaria NOUBI, CEGEP de trois-rivières. Tous droits réservés.
+  </footer>
+</body>
+
+
+</html>
