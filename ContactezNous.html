@@ -34,14 +34,14 @@
       </button>
 
       <!-- Menu desktop -->
-      <nav class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-sm items-center"
-        aria-label="Menu principal">
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-sm items-center" aria-label="Menu principal">
         <a href="index.html">Accueil</a>
         <a href="Formation.html">Nos formations</a>
         <a href="ContactezNous.html">Infos & Recrutement</a>
         <a href="Inscription.html" class="bg-primary text-light px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">
           Inscription
         </a>
+          <a href="documents.html" class="text-gold font-semibold">Recherche de diplômes</a>
       </nav>
     </div>
 
@@ -56,6 +56,8 @@
           class="block mt-3 bg-primary text-light text-center px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">
           Inscription
         </a>
+        <a href="documents.html" class="block py-3 hover:text-primary border-b border-gold-100">Recherche de
+          diplômes</a>
         <a href="#" id="installBtnMobile"
           class="block mt-3 bg-secondary text-white text-center px-4 py-2 rounded-lg font-semibold hover:bg-gray-700">
           📲 Installer
@@ -104,22 +106,23 @@
           <h3 class="text-xl font-bold text-secondary mb-6 text-center">Postulez maintenant</h3>
           <form action="candidature.php" method="POST" enctype="multipart/form-data" class="space-y-4" novalidate>
             <label for="cand_name"
-              class="block w-full rounded-lg  px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">Nom complet</label>
+              class="block w-full rounded-lg  px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">Nom
+              complet</label>
             <input id="cand_name" name="cand_name" placeholder="Nom complet" required
               class="block w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-               <label for="cand_email"
+            <label for="cand_email"
               class="block w-full rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">Email</label>
-            
+
             <input id="cand_email" type="email" name="cand_email" placeholder="Email" required
               class="block w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-               <label for="cand_tel"
+            <label for="cand_tel"
               class="block w-full rounded-lg  px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">Téléphone</label>
-            
+
             <input id="cand_tel" type="tel" name="cand_phone" placeholder="Téléphone"
               class="block w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
-               <label for="cand_cv"
+            <label for="cand_cv"
               class="block w-full rounded-lg  px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">CV</label>
-            <input  id="cand_cv" type="file" name="cand_cv" required class="block w-full text-sm focus:outline-none">
+            <input id="cand_cv" type="file" name="cand_cv" required class="block w-full text-sm focus:outline-none">
             <textarea name="cand_message" rows="3" placeholder="Votre message ou motivation"
               class="block w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
             <button type="submit" aria-label="Postuler"
@@ -144,9 +147,8 @@
     <!-- Section Carte + Formulaire -->
     <section class="relative w-full h-[80vh]">
       <!-- Google Map -->
-      <iframe title="l'adresse de l'école" class="absolute border-0 w-full h-full" 
+      <iframe title="l'adresse de l'école" class="absolute border-0 w-full h-full"
         src="https://www.google.com/maps?q=%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%A7%D9%84%D8%A3%D9%85%D9%8A%D8%B1%D8%A9%20%D9%84%D8%A7%D9%84%D8%A9%20%D8%B9%D8%A7%D8%A6%D8%B4%D8%A9%20%D8%A5%D9%82%D8%A7%D9%85%D8%A9%20%D9%85%D9%84%D8%A7%D9%83%20%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D8%B7%D8%A7%D8%A8%D9%82%203,%20Settat,%20Morocco&output=embed"
-
         allowfullscreen></iframe>
 
       <!-- Overlay sombre -->
@@ -245,7 +247,7 @@
   </main>
   <!-- Footer -->
   <footer class="bg-secondary text-light py-4 text-center text-xs sm:text-sm">
-     © 2025 Zakaria NOUBI, CEGEP de trois-rivières. Tous droits réservés.
+    © 2025 Zakaria NOUBI, CEGEP de trois-rivières. Tous droits réservés.
   </footer>
 
 </body>
