@@ -9,6 +9,14 @@
   <title>Recherche de diplômes | Easy Bridge International Academy</title>
 
   <link rel="manifest" href="/manifest.json">
+    <!-- Favicon pour navigateur classique -->
+  <link rel="icon" href="img/icon-36X36.png" sizes="32x32" type="image/png">
+  
+  <!-- Favicon pour écran d'accueil mobile / PWA -->
+  <link rel="icon" href="img/icon-192X192.png" sizes="192x192" type="image/png">
+  
+  <!-- Apple touch icon (iOS) -->
+  <link rel="apple-touch-icon" href="img/icon-192X192.png">
   <link rel="icon" href="/icons/icon-192.png">
   <meta name="theme-color" content="#B08E2A">
 
@@ -38,6 +46,31 @@
 
       <nav class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-sm items-center" aria-label="Menu principal">
         <a href="index.html">Accueil</a>
+         <div class="relative group">
+          <button class="flex items-center hover:text-primary focus:outline-none">
+            À propos
+            <svg class="w-4 h-4 ml-1 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            class="absolute left-0 mt-2 w-60 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+
+            <a href="Apropos.html"
+              class="block px-4 py-3 hover:bg-gray-100 rounded-t-lg">
+              Le mot du Directeur
+            </a>
+
+            <a href="Vae.html"
+              class="block px-4 py-3 hover:bg-gray-100 rounded-b-lg">
+              Validation des Acquis (VAE)
+            </a>
+
+          </div>
+        </div>
         <a href="Formation.html">Nos formations</a>
         <a href="ContactezNous.html">Infos & Recrutement</a>
         <a href="Inscription.html" class="bg-primary text-light px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">Inscription</a>
@@ -48,10 +81,26 @@
     <nav id="mobile-menu" class="mobile-collapsible md:hidden bg-light border-t border-gray-200" style="height:0">
       <div class="flex flex-col px-6 pb-2">
         <a href="index.html" class="block py-3 hover:text-primary border-b border-gold-100">Accueil</a>
+        <a href="Apropos.html" class="block py-3 hover:text-primary border-b border-gold-100">
+          Le mot du Directeur
+        </a>
+
+        <a href="Vae.html" class="block py-3 hover:text-primary border-b border-gold-100">
+          Validation des Acquis (VAE)
+        </a>
+
         <a href="Formation.html" class="block py-3 hover:text-primary border-b border-gold-100">Nos formations</a>
-        <a href="ContactezNous.html" class="block py-3 hover:text-primary border-b border-gold-100">Infos & Recrutement</a>
-        <a href="Inscription.html" class="block mt-3 bg-primary text-light text-center px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">Inscription</a>
-        <a href="documents.html" class="block mt-3 text-gold font-semibold text-center px-4 py-2 rounded-lg hover:bg-gray-100">Recherche de diplômes</a>
+        <a href="ContactezNous.html" class="block py-3 hover:text-primary border-b border-gold-100">Infos &
+          Recrutement</a>
+        <a href="Inscription.html"
+          class="block mt-3 bg-primary text-light text-center px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">
+          Inscription
+        </a>
+        <a href="documents.html" class="block py-3 hover:text-primary border-b border-gold-100">Vérification Diplôme</a>
+        <a href="#" id="installBtnMobile"
+          class="block mt-3 bg-secondary text-white text-center px-4 py-2 rounded-lg font-semibold hover:bg-gray-700">
+          📲 Installer
+        </a>
       </div>
     </nav>
   </header>

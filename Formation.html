@@ -7,6 +7,14 @@
   <meta name="description"
     content="Easy Bridge International Academy - Offrant des formations professionnelles et supérieures pour un avenir réussi.">
   <title>Formations | Easy Bridge International Academy</title>
+  <!-- Favicon pour navigateur classique -->
+  <link rel="icon" href="img/icon-36X36.png" sizes="32x32" type="image/png">
+
+  <!-- Favicon pour écran d'accueil mobile / PWA -->
+  <link rel="icon" href="img/icon-192X192.png" sizes="192x192" type="image/png">
+
+  <!-- Apple touch icon (iOS) -->
+  <link rel="apple-touch-icon" href="img/icon-192X192.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/scripts.js" defer></script>
   <script>
@@ -40,19 +48,48 @@
       <!-- Menu desktop -->
       <nav class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-sm items-center" aria-label="Menu principal">
         <a href="index.html">Accueil</a>
+        <div class="relative group">
+          <button class="flex items-center hover:text-primary focus:outline-none">
+            À propos
+            <svg class="w-4 h-4 ml-1 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            class="absolute left-0 mt-2 w-60 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+
+            <a href="Apropos.html" class="block px-4 py-3 hover:bg-gray-100 rounded-t-lg">
+              Le mot du Directeur
+            </a>
+
+            <a href="Vae.html" class="block px-4 py-3 hover:bg-gray-100 rounded-b-lg">
+              Validation des Acquis (VAE)
+            </a>
+
+          </div>
+        </div>
         <a href="Formation.html">Nos formations</a>
         <a href="ContactezNous.html">Infos & Recrutement</a>
         <a href="Inscription.html" class="bg-primary text-light px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">
           Inscription
         </a>
-        <a href="documents.html" class="text-gold font-semibold">Recherche de diplômes</a>
+        <a href="documents.html" class="text-gold font-semibold">Vérification Diplôme</a>
       </nav>
     </div>
 
     <!-- Menu mobile -->
-    <nav id="mobile-menu" class="mobile-collapsible md:hidden bg-light border-t border-gray-200" style="height:0">
+     <nav id="mobile-menu" class="mobile-collapsible md:hidden bg-light border-t border-gray-200" style="height:0">
       <div class="flex flex-col px-6 pb-2">
         <a href="index.html" class="block py-3 hover:text-primary border-b border-gold-100">Accueil</a>
+        <a href="Apropos.html" class="block py-3 hover:text-primary border-b border-gold-100">
+          Le mot du Directeur
+        </a>
+
+        <a href="Vae.html" class="block py-3 hover:text-primary border-b border-gold-100">
+          Validation des Acquis (VAE)
+        </a>
+
         <a href="Formation.html" class="block py-3 hover:text-primary border-b border-gold-100">Nos formations</a>
         <a href="ContactezNous.html" class="block py-3 hover:text-primary border-b border-gold-100">Infos &
           Recrutement</a>
@@ -99,81 +136,88 @@
           data-filter="logistique">Pôle Logistique</button>
       </div>
 
-    <div id="formations-grid" class="grid md:grid-cols-2 gap-8">
+      <div id="formations-grid" class="grid md:grid-cols-2 gap-8">
 
-  <!-- Pôle Gestion -->
-  <div class="formation-card gestion bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up">
-    <h4 class="font-semibold text-xl mb-3 text-primary">📊 Pôle Gestion</h4>
-    <ul class="space-y-2 text-sm text-gray-700">
-      <li>🎓 Bachelor Professionnel en Gestion des Ressources Humaines</li>
-      <li>🎓 Bachelor Professionnel en Management et Coaching Sportif</li>
-      <li>🎓 Bachelor Professionnel en Gestion Comptable et Financière</li>
-      <li>🎓 Bachelor Professionnel en Audit et Contrôle de Gestion</li>
-      <li>🎓 Bachelor Professionnel en Management des Organisations</li>
-    </ul>
-  </div>
+        <!-- Pôle Gestion -->
+        <div
+          class="formation-card gestion bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up">
+          <h4 class="font-semibold text-xl mb-3 text-primary">📊 Pôle Gestion</h4>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>🎓 Bachelor Professionnel en Gestion des Ressources Humaines</li>
+            <li>🎓 Bachelor Professionnel en Management et Coaching Sportif</li>
+            <li>🎓 Bachelor Professionnel en Gestion Comptable et Financière</li>
+            <li>🎓 Bachelor Professionnel en Audit et Contrôle de Gestion</li>
+            <li>🎓 Bachelor Professionnel en Management des Organisations</li>
+          </ul>
+        </div>
 
-  <!-- Pôle Commerce et Marketing -->
-  <div class="formation-card commerce bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-200">
-    <h4 class="font-semibold text-xl mb-3 text-primary">🛒 Pôle Commerce et Marketing</h4>
-    <ul class="space-y-2 text-sm text-gray-700">
-      <li>🎓 Bachelor Professionnel en Communication et Marketing Digital</li>
-      <li>🎓 Bachelor Professionnel en Commerce International</li>
-      <li>🎓 Bachelor Professionnel en Marketing et Action Commerciale</li>
-    </ul>
-  </div>
+        <!-- Pôle Commerce et Marketing -->
+        <div
+          class="formation-card commerce bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-200">
+          <h4 class="font-semibold text-xl mb-3 text-primary">🛒 Pôle Commerce et Marketing</h4>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>🎓 Bachelor Professionnel en Communication et Marketing Digital</li>
+            <li>🎓 Bachelor Professionnel en Commerce International</li>
+            <li>🎓 Bachelor Professionnel en Marketing et Action Commerciale</li>
+          </ul>
+        </div>
 
-  <!-- Pôle BTP et Logistique -->
-  <div class="formation-card btp bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-400">
-    <h4 class="font-semibold text-xl mb-3 text-primary">🏗️ Pôle BTP et Logistique</h4>
-    <ul class="space-y-2 text-sm text-gray-700">
-      <li>🎓 Bachelor Professionnel en Génie Civil et Construction</li>
-      <li>🎓 Bachelor Professionnel en Qualité, Sécurité et Environnement (QSE)</li>
-      <li>🎓 Bachelor Professionnel en Management des Achats</li>
-    </ul>
-  </div>
+        <!-- Pôle BTP et Logistique -->
+        <div
+          class="formation-card btp bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-400">
+          <h4 class="font-semibold text-xl mb-3 text-primary">🏗️ Pôle BTP et Logistique</h4>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>🎓 Bachelor Professionnel en Génie Civil et Construction</li>
+            <li>🎓 Bachelor Professionnel en Qualité, Sécurité et Environnement (QSE)</li>
+            <li>🎓 Bachelor Professionnel en Management des Achats</li>
+          </ul>
+        </div>
 
-  <!-- Pôle Génie Industriel & Génie Appliqué -->
-  <div class="formation-card genie bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-600">
-    <h4 class="font-semibold text-xl mb-3 text-primary">🛠️ Pôle Génie Industriel & Génie Appliqué</h4>
-    <ul class="space-y-2 text-sm text-gray-700">
-      <li>🎓 Bachelor Professionnel en Ingénierie Industrielle</li>
-      <li>🎓 Bachelor Professionnel en Ingénierie de la Qualité</li>
-      <li>🎓 Bachelor Professionnel en Génie Appliqué</li>
-    </ul>
-  </div>
+        <!-- Pôle Génie Industriel & Génie Appliqué -->
+        <div
+          class="formation-card genie bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-600">
+          <h4 class="font-semibold text-xl mb-3 text-primary">🛠️ Pôle Génie Industriel & Génie Appliqué</h4>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>🎓 Bachelor Professionnel en Ingénierie Industrielle</li>
+            <li>🎓 Bachelor Professionnel en Ingénierie de la Qualité</li>
+            <li>🎓 Bachelor Professionnel en Génie Appliqué</li>
+          </ul>
+        </div>
 
-  <!-- Pôle Informatique -->
-  <div class="formation-card informatique bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-800">
-    <h4 class="font-semibold text-xl mb-3 text-primary">💻 Pôle Informatique</h4>
-    <ul class="space-y-2 text-sm text-gray-700">
-      <li>🎓 Bachelor Professionnel en Informatique et Réseaux</li>
-      <li>🎓 Bachelor Professionnel en Conception et Développement d’Applications</li>
-      <li>🎓 Bachelor Professionnel en Développement Logiciel</li>
-    </ul>
-  </div>
+        <!-- Pôle Informatique -->
+        <div
+          class="formation-card informatique bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-800">
+          <h4 class="font-semibold text-xl mb-3 text-primary">💻 Pôle Informatique</h4>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>🎓 Bachelor Professionnel en Informatique et Réseaux</li>
+            <li>🎓 Bachelor Professionnel en Conception et Développement d’Applications</li>
+            <li>🎓 Bachelor Professionnel en Développement Logiciel</li>
+          </ul>
+        </div>
 
-  <!-- Pôle Graphisme & Art -->
-  <div class="formation-card graphisme bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-1000">
-    <h4 class="font-semibold text-xl mb-3 text-primary">🎨 Pôle Graphisme & Art</h4>
-    <ul class="space-y-2 text-sm text-gray-700">
-      <li>🎓 Bachelor Professionnel en Design Graphique</li>
-      <li>🎓 Bachelor Professionnel en Design d’Espace</li>
-      <li>🎓 Bachelor Professionnel en Études Cinématographiques et Audiovisuelles</li>
-    </ul>
-  </div>
+        <!-- Pôle Graphisme & Art -->
+        <div
+          class="formation-card graphisme bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-1000">
+          <h4 class="font-semibold text-xl mb-3 text-primary">🎨 Pôle Graphisme & Art</h4>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>🎓 Bachelor Professionnel en Design Graphique</li>
+            <li>🎓 Bachelor Professionnel en Design d’Espace</li>
+            <li>🎓 Bachelor Professionnel en Études Cinématographiques et Audiovisuelles</li>
+          </ul>
+        </div>
 
-  <!-- Pôle Métiers de l’Enseignement & Linguistiques -->
-  <div class="formation-card enseignement bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-1200">
-    <h4 class="font-semibold text-xl mb-3 text-primary">📚 Pôle Métiers de l’Enseignement & Linguistiques</h4>
-    <ul class="space-y-2 text-sm text-gray-700">
-      <li>🎓 Bachelor Professionnel en Éducation et Pédagogie</li>
-      <li>🎓 Bachelor Professionnel en Didactique des Langues</li>
-      <li>🎓 Bachelor Professionnel en Éducation Spécialisée</li>
-    </ul>
-  </div>
+        <!-- Pôle Métiers de l’Enseignement & Linguistiques -->
+        <div
+          class="formation-card enseignement bg-white p-6 shadow-lg rounded-2xl transform transition duration-500 hover:scale-105 hover:shadow-2xl animate-slide-up delay-1200">
+          <h4 class="font-semibold text-xl mb-3 text-primary">📚 Pôle Métiers de l’Enseignement & Linguistiques</h4>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>🎓 Bachelor Professionnel en Éducation et Pédagogie</li>
+            <li>🎓 Bachelor Professionnel en Didactique des Langues</li>
+            <li>🎓 Bachelor Professionnel en Éducation Spécialisée</li>
+          </ul>
+        </div>
 
-</div>
+      </div>
 
     </section>
     <!-- Section 2 : Formations Professionnelles -->
@@ -288,7 +332,7 @@
 
 
   <!-- Footer -->
-  <footer class="bg-secondary text-light py-4 text-center text-sm"> © 2025 Zakaria NOUBI, CEGEP de trois-rivières. Tous
+  <footer class="bg-secondary text-light py-4 text-center text-sm"> © 2026 Zakaria NOUBI, CEGEP de trois-rivières. Tous
     droits réservés.</footer>
 
 

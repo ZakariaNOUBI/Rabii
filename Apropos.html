@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="À propos - Easy Bridge International Academy. Mot du Directeur et Validation des Acquis de l’Expérience (VAE).">
+  <title>À propos | Easy Bridge International Academy</title>
+  <!-- Favicon pour navigateur classique -->
+  <link rel="icon" href="img/icon-36X36.png" sizes="32x32" type="image/png">
+
+  <!-- Favicon pour écran d'accueil mobile / PWA -->
+  <link rel="icon" href="img/icon-192X192.png" sizes="192x192" type="image/png">
+
+  <!-- Apple touch icon (iOS) -->
+  <link rel="apple-touch-icon" href="img/icon-192X192.png">
+  <!-- Manifest & favicon -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/icons/icon-192.png">
+  <meta name="theme-color" content="#B08E2A">
+
+  <!-- Feuille de style -->
+  <link rel="stylesheet" href="style/css/style.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Script principal -->
+  <script src="js/scripts.js" defer></script>
+</head>
+
+<body class="font-sans text-secondary bg-light">
+
+  <!-- NAVBAR -->
+  <header class="bg-light shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex justify-between items-center">
+
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <a href="index.html"><img src="img/logo.jpg" alt="Logo EasyBridge" class="h-10"></a>
+        <div class="leading-tight">
+          <h1 class="font-bold text-sm text-secondary">Easy Bridge</h1>
+          <p class="text-xs text-gray-600">International Academy</p>
+        </div>
+      </div>
+
+      <button id="menu-btn" class="md:hidden flex flex-col space-y-1.5" aria-label="Menu" aria-expanded="false">
+        <span class="block w-6 h-0.5 bg-secondary"></span>
+        <span class="block w-6 h-0.5 bg-secondary"></span>
+        <span class="block w-6 h-0.5 bg-secondary"></span>
+      </button>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-sm items-center">
+
+        <a href="index.html">Accueil</a>
+
+        <!-- Dropdown À propos -->
+        <div class="relative group">
+          <button class="flex items-center hover:text-primary focus:outline-none">
+            À propos
+            <svg class="w-4 h-4 ml-1 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            class="absolute left-0 mt-2 w-60 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+
+            <a href="#mot-directeur" class="block px-4 py-3 hover:bg-gray-100 rounded-t-lg">
+              Le mot du Directeur
+            </a>
+
+            <a href="Vae.html" class="block px-4 py-3 hover:bg-gray-100 rounded-b-lg">
+              Validation des Acquis (VAE)
+            </a>
+
+          </div>
+        </div>
+
+        <a href="Formation.html">Nos formations</a>
+        <a href="ContactezNous.html">Infos & Recrutement</a>
+
+        <a href="Inscription.html" class="bg-primary text-light px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">
+          Inscription
+        </a>
+
+        <a href="documents.html" class="text-gold font-semibold">
+          Vérification Diplôme
+        </a>
+
+      </nav>
+
+    </div>
+    <!-- Menu mobile -->
+    <!-- Menu mobile -->
+    <nav id="mobile-menu" class="mobile-collapsible md:hidden bg-light border-t border-gray-200" style="height:0">
+      <div class="flex flex-col px-6 pb-2">
+        <a href="index.html" class="block py-3 hover:text-primary border-b border-gold-100">Accueil</a>
+        <a href="Apropos.html" class="block py-3 hover:text-primary border-b border-gold-100">
+          Le mot du Directeur
+        </a>
+
+        <a href="Vae.html" class="block py-3 hover:text-primary border-b border-gold-100">
+          Validation des Acquis (VAE)
+        </a>
+
+        <a href="Formation.html" class="block py-3 hover:text-primary border-b border-gold-100">Nos formations</a>
+        <a href="ContactezNous.html" class="block py-3 hover:text-primary border-b border-gold-100">Infos &
+          Recrutement</a>
+        <a href="Inscription.html"
+          class="block mt-3 bg-primary text-light text-center px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">
+          Inscription
+        </a>
+        <a href="documents.html" class="block py-3 hover:text-primary border-b border-gold-100">Vérification Diplôme</a>
+        <a href="#" id="installBtnMobile"
+          class="block mt-3 bg-secondary text-white text-center px-4 py-2 rounded-lg font-semibold hover:bg-gray-700">
+          📲 Installer
+        </a>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="bg-secondary text-light py-20 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">
+          À propos de Easy Bridge Academy
+        </h2>
+        <p class="text-lg">
+          Construire un pont entre formation académique et employabilité réelle
+        </p>
+      </div>
+    </section>
+
+    <!-- MOT DU DIRECTEUR -->
+    <section id="mot-directeur" class="max-w-6xl mx-auto px-6 py-16">
+
+      <h3 class="text-2xl font-bold mb-6">Mot du Directeur</h3>
+
+      <p class="font-semibold mb-6">
+        Rabii Bachar – Directeur d’Easy Bridge Academy
+      </p>
+
+      <!-- PHOTOS , Rod balek hna khassna n7ooto texte-->
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+
+        <div class="overflow-hidden rounded-xl shadow-lg">
+          <img src="img/directeur1.jpg" alt="Rabii Bachar - Directeur Easy Bridge Academy"
+            class="w-full h-80 object-cover">
+        </div>
+
+        <div class="overflow-hidden rounded-xl shadow-lg">
+          <img src="img/directeur2.jpg" alt="Rabii Bachar lors d’un événement académique"
+            class="w-full h-80 object-cover">
+        </div>
+
+      </div>
+
+      <p class="italic text-primary mb-6">
+        « Easy Bridge Academy est née d’une conviction forte : la formation ne doit pas être uniquement théorique,
+        elle doit être utile, concrète et directement connectée au monde professionnel. »
+      </p>
+
+      <p class="text-gray-700 mb-4">
+        Depuis la création d’Easy Bridge Academy, notre ambition a toujours été claire :
+        construire un pont solide entre l’apprentissage, la compétence réelle et l’employabilité.
+      </p>
+
+      <p class="text-gray-700 mb-4">
+        Dans un monde en constante évolution, nous avons fait le choix d’une formation moderne,
+        flexible et orientée résultats.
+      </p>
+
+      <p class="text-gray-700">
+        Notre académie est à la fois une école supérieure et un établissement de formation professionnelle,
+        offrant des formations professionnelles, des licences professionnelles,
+        des masters professionnels et un DBA, en présentiel et en ligne.
+      </p>
+
+    </section>
+
+    <section id="mot-directeur" class="max-w-6xl mx-auto px-6 py-16">
+
+      <h3 class="text-2xl font-bold mb-6">Mot du Directeur</h3>
+
+      <p class="font-semibold mb-8">
+        Rabii Bachar – Directeur d’Easy Bridge Academy
+      </p>
+
+      <!-- PHOTO 1 -->
+      <div class="mb-10">
+        <img src="img/directeur1.jpg" alt="Rabii Bachar - Directeur Easy Bridge Academy"
+          class="w-full max-w-4xl mx-auto h-96 object-cover rounded-xl shadow-lg">
+      </div>
+
+      <!-- CITATION -->
+      <p class="italic text-primary mb-6 text-center max-w-3xl mx-auto">
+        « Easy Bridge Academy est née d’une conviction forte : la formation ne doit pas être uniquement théorique,
+        elle doit être utile, concrète et directement connectée au monde professionnel. »
+      </p>
+      <div class="text-gray-700 space-y-5 text-justify">
+
+        <p>
+          Depuis la création d’Easy Bridge Academy, notre ambition a toujours été claire : construire un pont solide
+          entre l’apprentissage, la compétence réelle et l’employabilité. Dans un monde en constante évolution,
+          nous avons fait le choix d’une formation moderne, flexible et orientée résultats.
+        </p>
+
+        <p>
+          Notre académie est à la fois une école supérieure et un établissement de formation professionnelle,
+          offrant des formations professionnelles, des licences professionnelles, des masters professionnels et un DBA,
+          en présentiel et en ligne, tout en intégrant un système de VAE (Validation des Acquis de l’Expérience).
+          Cette diversité nous permet de répondre aux besoins des jeunes, des professionnels et des entrepreneurs,
+          quels que soient leur parcours ou leur niveau.
+        </p>
+
+        <p>
+          Ma vision est de faire d’Easy Bridge Academy une référence nationale et internationale, reconnue pour la
+          qualité
+          de son enseignement, son approche pratique et son engagement envers la réussite de ses apprenants.
+          Nous ne formons pas uniquement des diplômés, nous formons des profils compétents, responsables et prêts à
+          relever
+          les défis du marché du travail.
+        </p>
+
+        <p>
+          À Easy Bridge Academy, chaque apprenant est accompagné, valorisé et encouragé à croire en son potentiel.
+          Notre plus grande fierté reste la réussite de nos étudiants et leur insertion professionnelle durable,
+          au Maroc comme à l’international.
+        </p>
+
+        <p class="font-semibold text-center mt-8">
+          Former aujourd’hui les compétences de demain, tel est notre engagement.
+        </p>
+
+        <div class="text-center mt-10">
+          <p class="font-bold">Rabii Bachar</p>
+          <p class="text-sm text-gray-600">Directeur – Easy Bridge Academy</p>
+        </div>
+
+      </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUI SOMMES-NOUS -->
+    <section class="bg-gray-100 py-16">
+      <div class="max-w-6xl mx-auto px-6">
+
+        <h3 class="text-2xl font-bold mb-6 text-center">Qui sommes-nous ?</h3>
+
+        <p class="text-gray-700 text-center max-w-4xl mx-auto mb-10">
+          Easy Bridge Academy est une école supérieure et un établissement de formation professionnelle
+          situé à Settat, au Maroc.
+          Notre mission est de créer un lien réel entre formation académique,
+          compétence pratique et employabilité nationale et internationale.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+          <div class="bg-light shadow rounded-xl p-6">
+            <h4 class="font-bold mb-3">🎯 Notre mission</h4>
+            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+              <li>Former des profils opérationnels et compétents</li>
+              <li>Répondre aux besoins réels du marché</li>
+              <li>Accompagner l’insertion et l’évolution professionnelle</li>
+              <li>Valoriser l’expérience terrain</li>
+            </ul>
+          </div>
+
+          <div class="bg-light shadow rounded-xl p-6">
+            <h4 class="font-bold mb-3">🧠 Notre vision</h4>
+            <p class="text-gray-700">
+              Devenir une référence nationale et internationale dans la formation professionnelle
+              et l’enseignement supérieur appliqué grâce à des parcours modernes,
+              flexibles et orientés résultats.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VAE -->
+    <section id="vae" class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+
+        <h3 class="text-2xl font-bold mb-6 text-center">
+          Validation des Acquis de l’Expérience (VAE)
+        </h3>
+
+        <p class="text-gray-700 text-center max-w-4xl mx-auto mb-8">
+          Easy Bridge Academy intègre un système de VAE permettant aux professionnels
+          de faire reconnaître officiellement leur expérience et d’obtenir un diplôme
+          ou une certification sans reprendre un parcours classique.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <div class="bg-light shadow rounded-xl p-6 text-center">
+            <h4 class="font-bold mb-2">Reconnaissance officielle</h4>
+            <p class="text-sm text-gray-700">
+              Valorisation des compétences acquises sur le terrain.
+            </p>
+          </div>
+
+          <div class="bg-light shadow rounded-xl p-6 text-center">
+            <h4 class="font-bold mb-2">Évolution professionnelle</h4>
+            <p class="text-sm text-gray-700">
+              Accélération de carrière et mobilité professionnelle.
+            </p>
+          </div>
+
+          <div class="bg-light shadow rounded-xl p-6 text-center">
+            <h4 class="font-bold mb-2">Accompagnement personnalisé</h4>
+            <p class="text-sm text-gray-700">
+              Suivi et encadrement pédagogique tout au long du processus.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-secondary text-light py-6 text-center text-sm">
+    © 2026 Zakaria NOUBI, CEGEP de Trois-Rivières. Tous droits réservés.
+  </footer>
+
+</body>
+
+</html>
